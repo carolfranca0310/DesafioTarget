@@ -13,3 +13,5 @@ C:\Users\User\Desktop\TesteTarget\TargetDesafio\TargetDesafio\obj\Debug\net6.0\r
 C:\Users\User\Desktop\TesteTarget\TargetDesafio\TargetDesafio\obj\Debug\net6.0\TargetDesafio.pdb
 C:\Users\User\Desktop\TesteTarget\TargetDesafio\TargetDesafio\obj\Debug\net6.0\TargetDesafio.genruntimeconfig.cache
 C:\Users\User\Desktop\TesteTarget\TargetDesafio\TargetDesafio\obj\Debug\net6.0\ref\TargetDesafio.dll
+C:\Users\User\Desktop\TesteTarget\TargetDesafio\TargetDesafio\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\User\Desktop\TesteTarget\TargetDesafio\TargetDesafio\obj\Debug\net6.0\TargetDesafio.csproj.CopyComplete

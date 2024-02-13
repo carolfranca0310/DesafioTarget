@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System.IO;
+using System.Linq;
+using System;
 class Program
 {
 
@@ -6,6 +9,8 @@ class Program
     {
         QuestaoUm();
         QuestaoDois();
+        QuestaoQuatro();
+        QuestaoCinco();
     }
 
     private static bool VerificarFibonacci(int numero)
@@ -37,7 +42,7 @@ class Program
         }
 
         Console.WriteLine(SOMA);
-        Console.WriteLine(  );
+        Console.WriteLine();
     }
 
     public static void QuestaoDois()
@@ -54,7 +59,64 @@ class Program
         {
             Console.WriteLine($"O número {numero} não pertence à sequência de Fibonacci.");
         }
-        Console.WriteLine(  );
+        Console.WriteLine();
+    }
+     
+
+    public static void QuestaoQuatro()
+    {
+        decimal faturamentoSP = 67836.43m;
+        decimal faturamentoRJ = 36678.66m;
+        decimal faturamentoMG = 29229.88m;
+        decimal faturamentoES = 27165.48m;
+        decimal faturamentoOutros = 19849.53m;
+
+        decimal faturamentoTotal = faturamentoSP + faturamentoRJ + faturamentoMG + faturamentoES + faturamentoOutros;
+
+        decimal percentualSP = (faturamentoSP / faturamentoTotal) * 100;
+        decimal percentualRJ = (faturamentoRJ / faturamentoTotal) * 100;
+        decimal percentualMG = (faturamentoMG / faturamentoTotal) * 100;
+        decimal percentualES = (faturamentoES / faturamentoTotal) * 100;
+        decimal percentualOutros = (faturamentoOutros / faturamentoTotal) * 100;
+
+        Console.WriteLine($"Percentual de representação de SP: {percentualSP:F2}%");
+        Console.WriteLine($"Percentual de representação de RJ: {percentualRJ:F2}%");
+        Console.WriteLine($"Percentual de representação de MG: {percentualMG:F2}%");
+        Console.WriteLine($"Percentual de representação de ES: {percentualES:F2}%");
+        Console.WriteLine($"Percentual de representação de OUTROS: {percentualOutros:F2}%");
+    }
+
+    public static void QuestaoCinco()
+    {
+        Console.WriteLine("Digite uma string:");
+        string inputString = Console.ReadLine();
+
+        string reversedString = ReverterString(inputString);
+        Console.WriteLine($"String original: {inputString}");
+        Console.WriteLine($"String invertida: {reversedString}");
+    }
+
+    public static string ReverterString(string input)
+    {
+        char[] charArray = input.ToCharArray();
+        int leftIndex = 0;
+        int rightIndex = input.Length - 1;
+
+        while (leftIndex < rightIndex)
+        {
+            char temp = charArray[leftIndex];
+            charArray[leftIndex] = charArray[rightIndex];
+            charArray[rightIndex] = temp;
+
+            leftIndex++;
+            rightIndex--;
+        }
+
+        return new string(charArray);
     }
 }
+
+
+  
+
 
