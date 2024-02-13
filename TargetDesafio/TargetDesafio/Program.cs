@@ -27,7 +27,6 @@ class Program
 
         return b == numero;
     }
-
     public static void QuestaoUm()
     {
         Console.WriteLine("********QUESTÃO 01********");
@@ -44,7 +43,6 @@ class Program
         Console.WriteLine(SOMA);
         Console.WriteLine();
     }
-
     public static void QuestaoDois()
     {
         Console.WriteLine("********QUESTÃO 02********");
@@ -61,10 +59,10 @@ class Program
         }
         Console.WriteLine();
     }
-     
-
     public static void QuestaoQuatro()
     {
+
+        Console.WriteLine("********QUESTÃO 04********");
         decimal faturamentoSP = 67836.43m;
         decimal faturamentoRJ = 36678.66m;
         decimal faturamentoMG = 29229.88m;
@@ -84,19 +82,23 @@ class Program
         Console.WriteLine($"Percentual de representação de MG: {percentualMG:F2}%");
         Console.WriteLine($"Percentual de representação de ES: {percentualES:F2}%");
         Console.WriteLine($"Percentual de representação de OUTROS: {percentualOutros:F2}%");
-    }
 
+        Console.WriteLine();
+    }
     public static void QuestaoCinco()
     {
+        Console.WriteLine("********QUESTÃO 05********");
+
         Console.WriteLine("Digite uma string:");
         string inputString = Console.ReadLine();
 
         string reversedString = ReverterString(inputString);
         Console.WriteLine($"String original: {inputString}");
         Console.WriteLine($"String invertida: {reversedString}");
-    }
 
-    public static string ReverterString(string input)
+        Console.WriteLine();
+    }
+    private static string ReverterString(string input)
     {
         char[] charArray = input.ToCharArray();
         int leftIndex = 0;
